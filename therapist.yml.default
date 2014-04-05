@@ -1,0 +1,13 @@
+tumblr:
+    consumer_key: consumer_key
+    consumer_secret: consumer_secret
+    oauth_token: oauth_token
+    oauth_token_secret: oauth_token_secret
+    blog: blog
+github:
+    access_token: access_token
+repos:
+    - RestKit/RestKit
+    - AFNetworking/AFNetworking
+    - rails/rails
+    - emberjs/ember.js

@@ -1,0 +1,37 @@
+GIT
+  remote: git://github.com/tumblr/tumblr_client.git
+  revision: 8b7a0ab493cc9cf0540cc3e9cf45ee1c7504cb73
+  specs:
+    tumblr_client (0.8.2)
+      faraday (~> 0.8.9)
+      faraday_middleware (~> 0.8)
+      json
+      mime-types
+      oauth
+      simple_oauth
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.3.6)
+    faraday (0.8.9)
+      multipart-post (~> 1.2.0)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
+    json (1.8.1)
+    mime-types (2.2)
+    multipart-post (1.2.0)
+    oauth (0.4.7)
+    octokit (2.7.2)
+      sawyer (~> 0.5.2)
+    sawyer (0.5.4)
+      addressable (~> 2.3.5)
+      faraday (~> 0.8, < 0.10)
+    simple_oauth (0.2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  octokit (~> 2.0)
+  tumblr_client!
