@@ -88,8 +88,11 @@ def post_fake_for_repo(repo)
   fake = repo.fake
   title = "New issue in #{repo.name}!"
   body = "<h3><a href='https://github.com/#{repo.name}'>#{repo.name}</a> - #{fake[:title]}</h3><p>#{fake[:body]}</p>"
-  TUMBLR.text(CONFIG[:tumblr][:blog], title: title, body: body)
+  TUMBLR.text(CONFIG[:tumblr][:blog], state: :queue, title: title, body: body)
 end
 
-repo = Therapist::Repository.new(CONFIG[:repos].sample)
-post_fake_for_repo repo
+# repo = Therapist::Repository.new(CONFIG[:repos].sample)
+# post_fake_for_repo repo
+
+repos = CONFIG[:repos].map {|r| Therapist::Repository.new r}
+100.times {post_fake_for_repo repos.sample}
